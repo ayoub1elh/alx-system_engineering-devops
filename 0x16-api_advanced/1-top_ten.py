@@ -16,7 +16,7 @@ def top_ten(subreddit):
 
     user_agent = {'User-agent': 'Google Chrome Version 81.0.4044.129'}
     params = {'limit': 10}
-    url_base = 'https://www.reddit.com/dev/api/{}/hot/.json'.format(subreddit)
+    url_base = 'https://www.reddit.com/dev/api/r/{}/hot/.json'.format(subreddit)
 
     ml = get(url_base, headers=user_agent, params=params)
     total = ml.json()
